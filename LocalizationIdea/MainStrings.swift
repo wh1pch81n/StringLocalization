@@ -35,32 +35,39 @@ The benefits of this approach include:
 3) Xcode Likes it better.  Xcode has difficulties jumping to objective-c files and usually renders a swifty interface rather than the objective-c file.  Sometimes It can't even render it forcing the programmer to search for the file in the project navigator, or use some other work around.
 */
 
-public final class MainStrings: NSObject {
+public class EnumString: NSObject {
 	
-	public let localizedString: String
-	public let rawValue: String
-	
-	private init?(rawValue: String) {
-		self.rawValue = rawValue
-		self.localizedString = NSLocalizedString(rawValue, tableName: "MainStrings", bundle: Bundle.main, value: rawValue, comment: "")
+	final public let rawValue: String
+	final public var localizedString: String {
+		return NSLocalizedString(rawValue, tableName: stringsFileName, bundle: Bundle.main, value: rawValue, comment: "")
 	}
-
+	public var stringsFileName: String {
+		return String(describing: type(of: self))
+	}
+	
+	public init(rawValue: String) {
+		self.rawValue = rawValue
+	}
+	
 	// MARK: - Hashable
 	
-	public override var hashValue: Int { return rawValue.hashValue }
+	final public override var hashValue: Int { return rawValue.hashValue }
 	
-	public static func ==(lhs: MainStrings, rhs: MainStrings) -> Bool {
+	public static func ==(lhs: EnumString, rhs: EnumString) -> Bool {
 		return lhs.rawValue == rhs.rawValue
 	}
 	
 	// MARK: - Debug
-	public override var description: String {
+	final public override var description: String {
 		return String(describing: type(of: self))
 	}
-	public override var debugDescription: String {
+	final public override var debugDescription: String {
 		return String(describing: type(of: self))
 	}
-	
+
+}
+
+public final class MainStrings: EnumString {
 	// MARK: - Enum "states"
 	public static let HelloWorld = MainStrings(rawValue: "Hello World")
 	public static let Blah = MainStrings(rawValue: "Blah Blah Blah")

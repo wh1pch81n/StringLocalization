@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FA5B44E1DCF7C5E005CB8AD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5B44D1DCF7C5E005CB8AD /* File.swift */; };
 		7FF2EA131DCF18150076B7FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2EA121DCF18150076B7FD /* main.m */; };
 		7FF2EA161DCF18150076B7FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2EA151DCF18150076B7FD /* AppDelegate.m */; };
 		7FF2EA191DCF18150076B7FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2EA181DCF18150076B7FD /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7FA5B44D1DCF7C5E005CB8AD /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7FF2EA0E1DCF18150076B7FD /* LocalizationIdea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizationIdea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF2EA121DCF18150076B7FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FF2EA141DCF18150076B7FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				7FF2EA151DCF18150076B7FD /* AppDelegate.m */,
 				7FF2EA171DCF18150076B7FD /* ViewController.h */,
 				7FF2EA181DCF18150076B7FD /* ViewController.m */,
+				7FA5B44D1DCF7C5E005CB8AD /* File.swift */,
 				7FF2EA451DCF18300076B7FD /* MainStrings.swift */,
 				7FF2EA1A1DCF18150076B7FD /* Main.storyboard */,
 				7FF2EA1D1DCF18150076B7FD /* Assets.xcassets */,
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA5B44E1DCF7C5E005CB8AD /* File.swift in Sources */,
 				7FF2EA191DCF18150076B7FD /* ViewController.m in Sources */,
 				7FF2EA161DCF18150076B7FD /* AppDelegate.m in Sources */,
 				7FF2EA131DCF18150076B7FD /* main.m in Sources */,
@@ -529,6 +533,7 @@
 				7FF2EA3D1DCF18150076B7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FF2EA3E1DCF18150076B7FD /* Build configuration list for PBXNativeTarget "LocalizationIdeaTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +542,7 @@
 				7FF2EA401DCF18150076B7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FF2EA411DCF18150076B7FD /* Build configuration list for PBXNativeTarget "LocalizationIdeaUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +551,7 @@
 				7FF2EA431DCF18150076B7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
