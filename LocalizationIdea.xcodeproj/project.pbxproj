@@ -15,6 +15,8 @@
 		7FF2EA211DCF18150076B7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF2EA1F1DCF18150076B7FD /* LaunchScreen.storyboard */; };
 		7FF2EA2C1DCF18150076B7FD /* LocalizationIdeaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2EA2B1DCF18150076B7FD /* LocalizationIdeaTests.m */; };
 		7FF2EA371DCF18150076B7FD /* LocalizationIdeaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2EA361DCF18150076B7FD /* LocalizationIdeaUITests.m */; };
+		7FF2EA461DCF18300076B7FD /* MainStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2EA451DCF18300076B7FD /* MainStrings.swift */; };
+		7FF2EA481DCF1AF70076B7FD /* MainStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FF2EA471DCF1AF70076B7FD /* MainStrings.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		7FF2EA321DCF18150076B7FD /* LocalizationIdeaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizationIdeaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF2EA361DCF18150076B7FD /* LocalizationIdeaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizationIdeaUITests.m; sourceTree = "<group>"; };
 		7FF2EA381DCF18150076B7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FF2EA441DCF182F0076B7FD /* LocalizationIdea-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalizationIdea-Bridging-Header.h"; sourceTree = "<group>"; };
+		7FF2EA451DCF18300076B7FD /* MainStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainStrings.swift; sourceTree = "<group>"; };
+		7FF2EA471DCF1AF70076B7FD /* MainStrings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = MainStrings.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +110,14 @@
 				7FF2EA151DCF18150076B7FD /* AppDelegate.m */,
 				7FF2EA171DCF18150076B7FD /* ViewController.h */,
 				7FF2EA181DCF18150076B7FD /* ViewController.m */,
+				7FF2EA451DCF18300076B7FD /* MainStrings.swift */,
 				7FF2EA1A1DCF18150076B7FD /* Main.storyboard */,
 				7FF2EA1D1DCF18150076B7FD /* Assets.xcassets */,
 				7FF2EA1F1DCF18150076B7FD /* LaunchScreen.storyboard */,
 				7FF2EA221DCF18150076B7FD /* Info.plist */,
+				7FF2EA471DCF1AF70076B7FD /* MainStrings.strings */,
 				7FF2EA111DCF18150076B7FD /* Supporting Files */,
+				7FF2EA441DCF182F0076B7FD /* LocalizationIdea-Bridging-Header.h */,
 			);
 			path = LocalizationIdea;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 				TargetAttributes = {
 					7FF2EA0D1DCF18150076B7FD = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					7FF2EA261DCF18150076B7FD = {
@@ -246,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF2EA481DCF1AF70076B7FD /* MainStrings.strings in Resources */,
 				7FF2EA211DCF18150076B7FD /* LaunchScreen.storyboard in Resources */,
 				7FF2EA1E1DCF18150076B7FD /* Assets.xcassets in Resources */,
 				7FF2EA1C1DCF18150076B7FD /* Main.storyboard in Resources */,
@@ -276,6 +286,7 @@
 				7FF2EA191DCF18150076B7FD /* ViewController.m in Sources */,
 				7FF2EA161DCF18150076B7FD /* AppDelegate.m in Sources */,
 				7FF2EA131DCF18150076B7FD /* main.m in Sources */,
+				7FF2EA461DCF18300076B7FD /* MainStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,10 +435,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LocalizationIdea/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.LocalizationIdea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LocalizationIdea/LocalizationIdea-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -435,16 +450,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LocalizationIdea/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.LocalizationIdea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LocalizationIdea/LocalizationIdea-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		7FF2EA3F1DCF18150076B7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LocalizationIdeaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -457,6 +476,7 @@
 		7FF2EA401DCF18150076B7FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LocalizationIdeaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -469,6 +489,7 @@
 		7FF2EA421DCF18150076B7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LocalizationIdeaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.LocalizationIdeaUITests;
@@ -480,6 +501,7 @@
 		7FF2EA431DCF18150076B7FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LocalizationIdeaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.LocalizationIdeaUITests;
